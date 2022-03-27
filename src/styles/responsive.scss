@@ -1,0 +1,59 @@
+[data-dpr="1"] .hello {
+  // background-image: url(image@1x.jpg);
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 1401px) {
+  .container {
+    width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media(max-width: 1400px) {
+  .container {
+    margin-left: 160px;
+    margin-right: 160px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .container {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* ipad pro */
+@media screen and (max-width: 1024px) {
+  .container {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
+
+/* ipad */
+@media screen and (max-width: 768px) {
+  .container {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+/* iphone6 7 8 plus */
+@media screen and (max-width: 414px) {}
+
+/* iphoneX */
+@media screen and (max-width: 375px) and (-webkit-device-pixel-ratio: 3) {}
+
+/* iphone6 7 8 */
+@media screen and (max-width: 375px) and (-webkit-device-pixel-ratio: 2) {}
+
+/* iphone5 */
+@media screen and (max-width: 320px) {}

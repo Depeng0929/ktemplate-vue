@@ -1,0 +1,25 @@
+@import "./vars.scss";
+@import "./common.scss";
+@import "./normalize.scss";
+@import "./mixins.scss";
+@import "./layout.scss";
+@import "./animate.scss";
+@import "./responsive.scss";
+
+html,
+body,
+#app {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+}
+
+html {
+  background: transparent;
+}
+
+html.dark {
+  background: var(--dark);
+}
