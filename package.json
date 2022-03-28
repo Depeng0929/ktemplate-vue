@@ -1,32 +1,31 @@
 {
   "name": "name",
   "version": "0.0.0",
-  "engines": {
-    "node": ">=14.0.0"
-  },
   "packageManager": "pnpm@6.32.3",
   "description": "[name]",
+  "homepage": "https://github.com/Depeng0929/[name]#readme",
+  "bugs": {
+    "url": "https://github.com/Depeng0929/[name]/issues"
+  },
   "license": "MIT",
   "author": "Depeng0929 <15365182986@163.com>",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Depeng0929/[name].git"
   },
-  "bugs": {
-    "url": "https://github.com/Depeng0929/[name]/issues"
-  },
-  "homepage": "https://github.com/Depeng0929/[name]#readme",
   "scripts": {
-    "build": "vite build",
+    "build": "cross-env vite build --mode production",
     "dev": "vite --port 3333 --open",
     "lint": "eslint .",
     "preview": "vite preview",
+    "release": "zx ./scripts/release.mjs",
     "test": "vitest",
-    "typecheck": "vue-tsc --noEmit",
-    "release": "zx ./scripts/release.mjs"
+    "typecheck": "vue-tsc --noEmit"
   },
   "dependencies": {
+    "@depeng9527/tools": "^2.2.3",
     "@vueuse/core": "^8.1.1",
+    "axios": "^0.26.1",
     "pinia": "^2.0.12",
     "vue": "^3.2.31",
     "vue-router": "4"
@@ -39,6 +38,7 @@
     "@unocss/reset": "^0.29.2",
     "@vitejs/plugin-vue": "^2.2.4",
     "@vue/test-utils": "^2.0.0-rc.18",
+    "cross-env": "^7.0.3",
     "eslint": "^8.11.0",
     "fs-extra": "^10.0.1",
     "jsdom": "^19.0.0",
@@ -54,5 +54,8 @@
   },
   "eslintConfig": {
     "extends": "@depeng9527/eslint-config"
+  },
+  "engines": {
+    "node": ">=14.0.0"
   }
 }
