@@ -13,6 +13,15 @@ export default defineConfig({
       '~/': `${path.resolve(__dirname, 'src')}/`,
     },
   },
+  server: {
+    proxy: {
+      '/api': {
+        target: process.env.VITE_APP_BASE_API,
+        changeOrigin: true,
+        // rewrite: path => path.replace(/^\/api/, ''),
+      },
+    },
+  },
   plugins: [
     Vue({
       reactivityTransform: true,
