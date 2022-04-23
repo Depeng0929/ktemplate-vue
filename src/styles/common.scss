@@ -1,8 +1,9 @@
 .reset {
   counter-reset: reset;
+
   .index {
     &::before {
-      content: counters(reset, '.') '. '; 
+      content: counters(reset, '.') '. ';
       counter-increment: reset;
     }
   }
@@ -19,6 +20,15 @@
   font-size: inherit;
   line-height: inherit;
   color: inherit;
+  cursor: pointer;
+
+  &:disabled {
+    opacity: 0.5;
+  }
+
+  &:hover {
+    opacity: 0.9;
+  }
 }
 
 .border {
