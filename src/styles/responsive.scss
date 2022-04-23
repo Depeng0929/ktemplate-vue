@@ -7,6 +7,13 @@
   margin-right: auto;
 }
 
+// 图片自适应
+.img-responsive {
+  @apply w-full h-0;
+  /* 图片的高宽比 */
+  padding-bottom: 66.620879%;
+}
+
 @media (min-width: 1401px) {
   .container {
     width: 1080px;
