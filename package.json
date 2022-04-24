@@ -15,7 +15,7 @@
   },
   "scripts": {
     "build": "cross-env vite build --mode production",
-    "dev": "vite --port 3333 --open",
+    "dev": "vite --open",
     "lint": "eslint .",
     "preview": "vite preview",
     "release": "zx ./scripts/release.mjs",
