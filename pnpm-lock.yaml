@@ -3,20 +3,23 @@ lockfileVersion: 5.3
 specifiers:
   '@depeng9527/eslint-config': ^1.4.1
   '@depeng9527/tools': ^2.2.4
-  '@iconify-json/carbon': ^1.1.3
-  '@types/node': ^17.0.27
-  '@unocss/preset-wind': ^0.30.13
-  '@unocss/reset': ^0.29.6
-  '@vitejs/plugin-vue': ^2.3.1
-  '@vue/test-utils': ^2.0.0-rc.21
+  '@iconify-json/carbon': ^1.1.2
+  '@types/node': ^17.0.21
+  '@types/nprogress': ^0.2.0
+  '@types/qs': ^6.9.7
+  '@unocss/preset-wind': ^0.30.6
+  '@unocss/reset': ^0.29.2
+  '@vitejs/plugin-vue': ^2.2.4
+  '@vue/test-utils': ^2.0.0-rc.18
   '@vueuse/core': ^8.3.1
   axios: ^0.26.1
   cross-env: ^7.0.3
   eslint: ^8.14.0
   fs-extra: ^10.1.0
   jsdom: ^19.0.0
-  pinia: ^2.0.13
+  pinia: ^2.0.12
   pnpm: ^6.32.10
+  qs: ^6.10.3
   sass: ^1.51.0
   typescript: ^4.6.3
   unocss: ^0.29.6
@@ -24,8 +27,8 @@ specifiers:
   unplugin-vue-components: ^0.18.5
   vite: ^2.9.5
   vitest: ^0.7.13
-  vue: ^3.2.33
-  vue-router: 4.0.14
+  vue: ^3.2.31
+  vue-router: '4'
   vue-tsc: ^0.33.9
   zx: ^6.1.0
 
@@ -34,6 +37,7 @@ dependencies:
   '@vueuse/core': 8.3.1_vue@3.2.33
   axios: 0.26.1
   pinia: 2.0.13_typescript@4.6.3+vue@3.2.33
+  qs: 6.10.3
   vue: 3.2.33
   vue-router: 4.0.14_vue@3.2.33
 
@@ -41,6 +45,8 @@ devDependencies:
   '@depeng9527/eslint-config': 1.4.1_eslint@8.14.0+typescript@4.6.3
   '@iconify-json/carbon': 1.1.3
   '@types/node': 17.0.27
+  '@types/nprogress': 0.2.0
+  '@types/qs': 6.9.7
   '@unocss/preset-wind': 0.30.13
   '@unocss/reset': 0.29.6
   '@vitejs/plugin-vue': 2.3.1_vite@2.9.5+vue@3.2.33
@@ -341,6 +347,14 @@ packages:
 
   /@types/normalize-package-data/2.4.1:
     resolution: {integrity: sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==}
+    dev: true
+
+  /@types/nprogress/0.2.0:
+    resolution: {integrity: sha512-1cYJrqq9GezNFPsWTZpFut/d4CjpZqA0vhqDUPFWYKF1oIyBz5qnoYMzR+0C/T96t3ebLAC1SSnwrVOm5/j74A==}
+    dev: true
+
+  /@types/qs/6.9.7:
+    resolution: {integrity: sha512-FGa1F62FT09qcrueBA6qYTrJPVDzah9a+493+o2PCXsesWHIn27G98TsSMs3WPNbZIEj4+VJf6saSFpvD+3Zsw==}
     dev: true
 
   /@types/throttle-debounce/2.1.0:
@@ -1058,7 +1072,6 @@ packages:
     dependencies:
       function-bind: 1.1.1
       get-intrinsic: 1.1.1
-    dev: true
 
   /callsites/3.1.0:
     resolution: {integrity: sha512-P8BjAsXvZS+VIDUI11hHCQEv74YT67YUi5JJFNWIqL235sBmjX4+qx9Muvls5ivyNENctx46xQLQ3aTuE7ssaQ==}
@@ -2168,7 +2181,6 @@ packages:
 
   /function-bind/1.1.1:
     resolution: {integrity: sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==}
-    dev: true
 
   /functional-red-black-tree/1.0.1:
     resolution: {integrity: sha512-dsKNQNdj6xA3T+QlADDA7mOSlX0qiMINjn0cgr+eGHGsbSHzTabcIogz2+p/iqP1Xs6EP/sS2SbqH+brGTbq0g==}
@@ -2184,7 +2196,6 @@ packages:
       function-bind: 1.1.1
       has: 1.0.3
       has-symbols: 1.0.2
-    dev: true
 
   /get-stream/6.0.1:
     resolution: {integrity: sha512-ts6Wi+2j3jQjqi70w5AlN8DFnkSwC+MqmxEzdEALB2qXZYV3X/b1CTfgPLGJNMeAWxdPfU8FO1ms3NUfaHCPYg==}
@@ -2282,7 +2293,6 @@ packages:
   /has-symbols/1.0.2:
     resolution: {integrity: sha512-chXa79rL/UC2KlX17jo3vRGz0azaWEx5tGqZg5pO3NUyEJVB17dMruQlzCCOfUvElghKcm5194+BCRvi2Rv/Gw==}
     engines: {node: '>= 0.4'}
-    dev: true
 
   /has-tostringtag/1.0.0:
     resolution: {integrity: sha512-kFjcSNhnlGV1kyoGk7OXKSawH5JOb/LzUc5w9B02hOTO0dfFRjbHQKvg1d6cf3HbeUmtU9VbbV3qzZ2Teh97WQ==}
@@ -2296,7 +2306,6 @@ packages:
     engines: {node: '>= 0.4.0'}
     dependencies:
       function-bind: 1.1.1
-    dev: true
 
   /hosted-git-info/2.8.9:
     resolution: {integrity: sha512-mxIDAb9Lsm6DoOJ7xH+5+X4y1LU/4Hi50L9C5sIswK3JzULS4bwk1FvjdBgvYR4bzT4tuUQiC15FE2f5HbLvYw==}
@@ -2906,7 +2915,6 @@ packages:
 
   /object-inspect/1.11.0:
     resolution: {integrity: sha512-jp7ikS6Sd3GxQfZJPyH3cjcbJF6GZPClgdV+EFygjFLQ5FmW/dRUnTd9PQ9k0JhoNDabWFbpF1yCdSWCC6gexg==}
-    dev: true
 
   /object-keys/1.1.1:
     resolution: {integrity: sha512-NuAESUOUMrlIXOfHKzD6bpPu3tYt3xvjNdRIQ+FeT0lNb4K8WR70CaDxhuNguS2XG+GjkyMwOzsN5ZktImfhLA==}
@@ -3227,6 +3235,13 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
+  /qs/6.10.3:
+    resolution: {integrity: sha512-wr7M2E0OFRfIfJZjKGieI8lBKb7fRCH4Fv5KNPEs7gJ8jadvotdsS08PzOKR7opXhZ/Xkjtt3WF9g38drmyRqQ==}
+    engines: {node: '>=0.6'}
+    dependencies:
+      side-channel: 1.0.4
+    dev: false
+
   /queue-microtask/1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
     dev: true
@@ -3393,7 +3408,6 @@ packages:
       call-bind: 1.0.2
       get-intrinsic: 1.1.1
       object-inspect: 1.11.0
-    dev: true
 
   /signal-exit/3.0.6:
     resolution: {integrity: sha512-sDl4qMFpijcGw22U5w63KmD3cZJfBuFlVNbVMKje2keoKML7X2UzWbc4XrmEbDwg0NXJc3yv4/ox7b+JWb57kQ==}
