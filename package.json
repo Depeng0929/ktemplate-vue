@@ -29,7 +29,7 @@
     "pinia": "^2.0.14",
     "qs": "^6.10.3",
     "vue": "^3.2.36",
-    "vue-router": "4.0.14"
+    "vue-router": "4.0.15"
   },
   "devDependencies": {
     "@depeng9527/eslint-config": "^1.4.1",
