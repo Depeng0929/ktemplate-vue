@@ -1,7 +1,7 @@
 {
   "name": "name",
   "version": "0.0.0",
-  "packageManager": "pnpm@6.32.3",
+  "packageManager": "pnpm@7.1.5",
   "description": "[name]",
   "homepage": "https://github.com/Depeng0929/[name]#readme",
   "bugs": {
@@ -48,9 +48,9 @@
     "pnpm": "^7.1.5",
     "sass": "^1.52.1",
     "typescript": "^4.7.2",
-    "unocss": "^0.29.6",
+    "unocss": "^0.36.0",
     "unplugin-auto-import": "^0.8.5",
-    "unplugin-vue-components": "^0.18.5",
+    "unplugin-vue-components": "^0.19.6",
     "vite": "^2.9.9",
     "vitest": "^0.12.9",
     "vue-tsc": "^0.35.2",
