@@ -6,6 +6,8 @@ import Vue from '@vitejs/plugin-vue'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Unocss from 'unocss/vite'
+import presetAttributify from '@unocss/preset-attributify'
+import presetIcons from '@unocss/preset-icons'
 
 export default defineConfig({
   resolve: {
@@ -46,7 +48,14 @@ export default defineConfig({
 
     // https://github.com/antfu/unocss
     // see unocss.config.ts for config
-    Unocss(),
+    Unocss({
+      presets: [
+        // @ts-expect-error icon
+        presetAttributify(),
+        // @ts-expect-error icon
+        presetIcons(),
+      ],
+    }),
   ],
 
   // https://github.com/vitest-dev/vitest
