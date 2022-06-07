@@ -23,12 +23,12 @@
     "typecheck": "vue-tsc --noEmit"
   },
   "dependencies": {
-    "@depeng9527/tools": "^2.2.7",
+    "@depeng9527/tools": "^2.2.8",
     "@vueuse/core": "^8.6.0",
     "axios": "^0.27.2",
     "pinia": "^2.0.14",
-    "qs": "^6.10.3",
-    "vue": "^3.2.36",
+    "qs": "^6.10.5",
+    "vue": "^3.2.37",
     "vue-router": "4.0.15"
   },
   "devDependencies": {
@@ -54,7 +54,7 @@
     "unocss": "^0.37.4",
     "unplugin-auto-import": "^0.8.7",
     "unplugin-vue-components": "^0.19.6",
-    "vite": "^2.9.9",
+    "vite": "^2.9.10",
     "vitest": "^0.12.10",
     "vue-tsc": "^0.35.2",
     "zx": "^6.2.3"
