@@ -39,6 +39,7 @@ export default defineConfig({
         '@vueuse/core',
       ],
       dts: true,
+      vueTemplate: true,
     }),
 
     // https://github.com/antfu/vite-plugin-components
