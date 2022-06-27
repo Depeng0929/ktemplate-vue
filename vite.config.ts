@@ -8,6 +8,7 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Unocss from 'unocss/vite'
 import presetAttributify from '@unocss/preset-attributify'
 import presetIcons from '@unocss/preset-icons'
+import vueJsx from '@vitejs/plugin-vue-jsx'
 
 export default defineConfig({
   resolve: {
@@ -29,6 +30,7 @@ export default defineConfig({
     Vue({
       reactivityTransform: true,
     }),
+    vueJsx(),
 
     // https://github.com/antfu/unplugin-auto-import
     AutoImport({

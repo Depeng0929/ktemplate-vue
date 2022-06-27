@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "@depeng9527/tools": "^2.2.8",
+    "@vitejs/plugin-vue-jsx": "^1.3.10",
     "@vueuse/core": "^8.7.5",
     "axios": "^0.27.2",
     "pinia": "^2.0.14",
@@ -45,6 +46,7 @@
     "@unocss/preset-wind": "^0.40.0",
     "@unocss/reset": "^0.40.0",
     "@vitejs/plugin-vue": "^2.3.3",
+    "@vue/babel-plugin-jsx": "^1.1.1",
     "@vue/test-utils": "^2.0.1",
     "cross-env": "^7.0.3",
     "eslint": "^8.18.0",
