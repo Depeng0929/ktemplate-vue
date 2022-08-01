@@ -53,9 +53,7 @@ export default defineConfig({
     // see unocss.config.ts for config
     Unocss({
       presets: [
-        // @ts-expect-error icon
         presetAttributify(),
-        // @ts-expect-error icon
         presetIcons(),
       ],
     }),
