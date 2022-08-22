@@ -1,17 +1,20 @@
 {
   "name": "name",
   "version": "0.0.0",
+  "packageManager": "pnpm@7.1.5",
   "description": "[name]",
+  "author": "Depeng0929 <15365182986@163.com>",
   "homepage": "https://github.com/Depeng0929/[name]#readme",
-  "bugs": {
-    "url": "https://github.com/Depeng0929/[name]/issues"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Depeng0929/[name].git"
   },
-  "license": "MIT",
-  "author": "Depeng0929 <15365182986@163.com>",
+  "bugs": {
+    "url": "https://github.com/Depeng0929/[name]/issues"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
   "scripts": {
     "build": "cross-env vite build --mode production",
     "dev": "vite --open",
@@ -20,9 +23,6 @@
     "release": "zx ./scripts/release.mjs",
     "test": "vitest",
     "typecheck": "vue-tsc --noEmit"
-  },
-  "eslintConfig": {
-    "extends": "@depeng9527/eslint-config"
   },
   "dependencies": {
     "@depeng9527/tools": "^2.4.2",
@@ -35,7 +35,7 @@
     "vue-router": "4.1.3"
   },
   "devDependencies": {
-    "@depeng9527/eslint-config": "^1.4.3",
+    "@antfu/eslint-config": "^0.26.1",
     "@iconify-json/carbon": "^1.1.7",
     "@iconify-json/mdi": "^1.1.30",
     "@types/node": "^18.7.9",
@@ -63,8 +63,7 @@
     "vue-tsc": "^0.40.1",
     "zx": "^7.0.8"
   },
-  "engines": {
-    "node": ">=14.0.0"
-  },
-  "packageManager": "pnpm@7.1.5"
+  "eslintConfig": {
+    "extends": "@antfu"
+  }
 }
