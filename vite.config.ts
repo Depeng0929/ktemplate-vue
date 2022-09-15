@@ -9,6 +9,7 @@ import Unocss from 'unocss/vite'
 import presetAttributify from '@unocss/preset-attributify'
 import presetIcons from '@unocss/preset-icons'
 import vueJsx from '@vitejs/plugin-vue-jsx'
+import legacy from '@vitejs/plugin-legacy'
 
 export default defineConfig({
   resolve: {
@@ -31,7 +32,10 @@ export default defineConfig({
       reactivityTransform: true,
     }),
     vueJsx(),
-
+    legacy({
+      targets: '> 0.5%',
+      modernPolyfills: true,
+    }),
     // https://github.com/antfu/unplugin-auto-import
     AutoImport({
       imports: [
@@ -63,4 +67,5 @@ export default defineConfig({
   test: {
     environment: 'jsdom',
   },
+
 })
