@@ -44,7 +44,7 @@
     "@unocss/preset-attributify": "^0.45.9",
     "@unocss/preset-icons": "^0.45.9",
     "@unocss/preset-wind": "^0.45.9",
-    "@unocss/reset": "^0.45.9",
+    "@unocss/reset": "^0.46.2",
     "@vitejs/plugin-legacy": "^2.1.0",
     "@vitejs/plugin-vue": "^3.0.3",
     "@vue/babel-plugin-jsx": "^1.1.1",
