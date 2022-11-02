@@ -8,7 +8,7 @@ interface userType {
 
 // 获取验证码
 export const getVerify = () => {
-  return http.get<null, userType>('/captcha')
+  return http.get< userType>('/captcha')
 }
 
 async function fetchData() {

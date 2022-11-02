@@ -2,14 +2,8 @@
 
 import path from 'path'
 import { defineConfig } from 'vite'
-import Vue from '@vitejs/plugin-vue'
-import Components from 'unplugin-vue-components/vite'
-import AutoImport from 'unplugin-auto-import/vite'
-import Unocss from 'unocss/vite'
-import presetAttributify from '@unocss/preset-attributify'
-import presetIcons from '@unocss/preset-icons'
-import vueJsx from '@vitejs/plugin-vue-jsx'
-import legacy from '@vitejs/plugin-legacy'
+import visualizer from 'rollup-plugin-visualizer'
+import { createVitePlugins } from './build/index.js'
 
 export default defineConfig({
   resolve: {
@@ -17,6 +11,28 @@ export default defineConfig({
       '~/': `${path.resolve(__dirname, 'src')}/`,
     },
   },
+
+  build: process.env.NODE_ENV === 'production'
+    ? {
+        sourcemap: false,
+        minify: 'terser',
+        terserOptions: {
+          compress: {
+            drop_console: true,
+          },
+        },
+        rollupOptions: {
+          plugins: [
+            process.env.NODE_ENV === 'production' && visualizer({
+              open: true,
+              gzipSize: true,
+              brotliSize: true,
+            }),
+          ],
+        },
+      }
+    : undefined,
+
   server: {
     port: 8080,
     proxy: {
@@ -27,41 +43,7 @@ export default defineConfig({
       },
     },
   },
-  plugins: [
-    Vue({
-      reactivityTransform: true,
-    }),
-    vueJsx(),
-    legacy({
-      targets: '> 0.5%',
-      modernPolyfills: true,
-    }),
-    // https://github.com/antfu/unplugin-auto-import
-    AutoImport({
-      imports: [
-        'vue',
-        'vue/macros',
-        'vue-router',
-        '@vueuse/core',
-      ],
-      dts: true,
-      vueTemplate: true,
-    }),
-
-    // https://github.com/antfu/vite-plugin-components
-    Components({
-      dts: true,
-    }),
-
-    // https://github.com/antfu/unocss
-    // see unocss.config.ts for config
-    Unocss({
-      presets: [
-        presetAttributify(),
-        presetIcons(),
-      ],
-    }),
-  ],
+  plugins: createVitePlugins(),
 
   // https://github.com/vitest-dev/vitest
   test: {

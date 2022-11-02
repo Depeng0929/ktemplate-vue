@@ -1,12 +1,14 @@
 import type { App } from 'vue'
 
 function installUserModules(app: App) {
-  const modulesFiles = import.meta.globEager('./setup/*.ts')
+  const modulesFiles = import.meta.glob('./setup/*.ts')
   Object.keys(modulesFiles).forEach((path) => {
     const module = modulesFiles[path]
-    const installFn = module.install || module.default
-    // auto import plugins for setup directory
-    installFn(app)
+
+    module().then((m: any) => {
+      const installFn = m.install || m.default
+      installFn(app)
+    })
   })
 }
 
