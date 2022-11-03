@@ -4,7 +4,7 @@ import { reqResolver, requestInterceptors, responeResolver, responseInterceptors
 
 function createAxios(options: AxiosRequestConfig = {}) {
   const defaultOptions = {
-    baseURL: import.meta.env.VITE_APP_API,
+    baseURL: import.meta.env.VITE_APP_BASE_API,
     header: {
       'content-type': 'application/json',
     },

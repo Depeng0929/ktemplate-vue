@@ -5,6 +5,7 @@ specifiers:
   '@depeng9527/tools': ^2.5.1
   '@iconify-json/carbon': ^1.1.9
   '@iconify-json/mdi': ^1.1.34
+  '@types/mockjs': ^1.0.7
   '@types/node': ^18.11.9
   '@types/nprogress': ^0.2.0
   '@types/qs': ^6.9.7
@@ -23,6 +24,7 @@ specifiers:
   eslint: ^8.26.0
   fs-extra: ^10.1.0
   jsdom: ^20.0.2
+  mockjs: ^1.1.0
   pinia: ^2.0.23
   pnpm: ^7.14.1
   qs: ^6.11.0
@@ -35,6 +37,7 @@ specifiers:
   unplugin-vue-components: ^0.22.9
   unplugin-vue-define-options: ^0.12.6
   vite: ^3.2.2
+  vite-plugin-mock-server: ^1.0.4
   vite-plugin-pages: ^0.27.1
   vite-plugin-vue-layouts: ^0.7.0
   vitest: ^0.24.5
@@ -45,9 +48,11 @@ specifiers:
 
 dependencies:
   '@depeng9527/tools': 2.5.1
+  '@types/mockjs': 1.0.7
   '@vitejs/plugin-vue-jsx': 2.1.0_vite@3.2.2+vue@3.2.41
   '@vueuse/core': 9.4.0_vue@3.2.41
   axios: 1.1.3
+  mockjs: 1.1.0
   pinia: 2.0.23_l7r24p6nevbtlimqmqcwa3ouhu
   qs: 6.11.0
   vite-plugin-pages: 0.27.1_vite@3.2.2
@@ -83,6 +88,7 @@ devDependencies:
   unplugin-vue-components: 0.22.9_vue@3.2.41
   unplugin-vue-define-options: 0.12.6
   vite: 3.2.2_sass@1.55.0
+  vite-plugin-mock-server: 1.0.4
   vite-plugin-vue-layouts: 0.7.0_43kamd5ki6mqledz5kdcpg62iu
   vitest: 0.24.5_jsdom@20.0.2+sass@1.55.0
   vue-tsc: 1.0.9_typescript@4.8.4
@@ -659,6 +665,10 @@ packages:
       - supports-color
     dev: true
 
+  /@howiefh/ant-path-matcher/0.0.2:
+    resolution: {integrity: sha512-gIVZbBi7KX43XaI4GUDITYgR6YFdRiGBu4HazVkjVTZ/tlNH6qSpydTxaZ1cd2eIzvSblXM63SqCxVo30yA9ww==}
+    dev: true
+
   /@humanwhocodes/config-array/0.11.7:
     resolution: {integrity: sha512-kBbPWzN8oVMLb0hOUYXhmxggL/1cJE6ydvjDIGi9EnAGUyA7cLVKQg+d/Dsm+KZwx2czGHrCmMVLiyg8s5JPKw==}
     engines: {node: '>=10.10.0'}
@@ -845,6 +855,10 @@ packages:
   /@types/minimist/1.2.2:
     resolution: {integrity: sha512-jhuKLIRrhvCPLqwPcx6INqmKeiA5EWrsCOPhrlFSrbrmU4ZMPjj5Ul/oLCMDO98XRUIwVm78xICz4EPCektzeQ==}
     dev: true
+
+  /@types/mockjs/1.0.7:
+    resolution: {integrity: sha512-OCxXz6hEaJOVpRwuJMiVY5a6LtJcih+br9gwB/Q8ooOBikvk5FpBQ31OlNimXo3EqKha1Z7PFBni+q9m+8NCWg==}
+    dev: false
 
   /@types/ms/0.7.31:
     resolution: {integrity: sha512-iiUgKzV9AuaEkZqkOLDIvlQiL6ltuZd9tGcW3gwpnX8JbuiuhFlEGmmFXEXkN50Cvq7Os88IY2v0dkDqXYWVgA==}
@@ -1736,6 +1750,11 @@ packages:
     engines: {node: '>= 0.8'}
     dependencies:
       delayed-stream: 1.0.0
+
+  /commander/9.4.1:
+    resolution: {integrity: sha512-5EEkTNyHNGFPD2H+c/dXXfQZYa/scCKasxWcXJaWnNJ99pnQN9Vnmqow+p+PlFPE63Q6mThaZws1T+HxfpgtPw==}
+    engines: {node: ^12.20.0 || >=14}
+    dev: false
 
   /concat-map/0.0.1:
     resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
@@ -3549,6 +3568,13 @@ packages:
       ufo: 0.8.6
     dev: true
 
+  /mockjs/1.1.0:
+    resolution: {integrity: sha512-eQsKcWzIaZzEZ07NuEyO4Nw65g0hdWAyurVol1IPl1gahRwY+svqzfgfey8U8dahLwG44d6/RwEzuK52rSa/JQ==}
+    hasBin: true
+    dependencies:
+      commander: 9.4.1
+    dev: false
+
   /mrmime/1.0.0:
     resolution: {integrity: sha512-a70zx7zFfVO7XpnQ2IX1Myh9yY4UYvfld/dikWRnsXxbyvMcfz+u6UfgNAtH+k2QqtJuzVpv6eLTx1G2+WKZbQ==}
     engines: {node: '>=10'}
@@ -4636,6 +4662,13 @@ packages:
     dependencies:
       spdx-correct: 3.1.1
       spdx-expression-parse: 3.0.1
+    dev: true
+
+  /vite-plugin-mock-server/1.0.4:
+    resolution: {integrity: sha512-ByWLtrBZVo1UkaHPvRpRo0+h/gWorWdTyuYCu2Hcicz3gbuSSdDjz6v8pUGAzpubae90Q7ziOqRL1TOHsbQpsQ==}
+    dependencies:
+      '@howiefh/ant-path-matcher': 0.0.2
+      chokidar: 3.5.3
     dev: true
 
   /vite-plugin-pages/0.27.1_vite@3.2.2:
