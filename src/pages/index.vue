@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { fetchUser } from '~/api/user/index'
 const name = $ref('')
 
 const router = useRouter()
