@@ -1,3 +1,4 @@
+/// <reference types="vite-plugin-pages/client" />
 declare interface Window {
   // extend the window
 }
